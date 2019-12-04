@@ -544,7 +544,7 @@ import com.sun.jersey.api.NotFoundException;
 			}
 		}
 
-		return URIUtils.resolveAgainstBase( requestUri, baseUri, ui.getPath() );
+		return URIUtils.resolveAgainstBase( requestUri, baseUri, requestUri.getPath() );
 	}
 
     private static String MATCHES_SCHEME = "[a-zA-Z][-.+A-Za-z0-9]+:";
