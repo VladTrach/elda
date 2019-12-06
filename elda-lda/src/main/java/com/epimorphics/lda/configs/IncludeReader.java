@@ -166,7 +166,7 @@ public class IncludeReader extends Reader {
 		stack.add(fileName);
 		seen.add(fileName);
 		
-		String content = EldaFileManager.get().readWholeFileAsUTF8(fileName);
+		String content = EldaFileManager.get().readWholeFileAsUTF8(fileName.replace("\\", "/").replace("\r", ""));
 		int position = 0;
 		while (true) {
 			String seek = "#include ";
